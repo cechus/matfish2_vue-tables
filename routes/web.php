@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('get_all_affiliates',function ()
+{
+	return response()->json(App\Affiliate::paginate());
+});

@@ -2,15 +2,15 @@
   <div @click="onClick">
     <div class="inline field">
       <label>Name: </label>
-      <span>{{rowData.name}}</span>
+      <span>{{rowData.first_name}}</span>
     </div>
     <div class="inline field">
       <label>Email: </label>
-      <span>{{rowData.email}}</span>
+      <span>{{rowData.last_name}}</span>
     </div>
     <div class="inline field">
       <label>Nickname: </label>
-      <span>{{rowData.nickname}}</span>
+      <span>{{rowData.second_name}}</span>
     </div>
     <div class="inline field">
       <label>Birthdate: </label>

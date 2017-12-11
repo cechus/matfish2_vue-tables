@@ -2,7 +2,7 @@
   <div>
     <filter-bar></filter-bar>
     <vuetable ref="vuetable"
-      api-url="http://vuetable.ratiw.net/api/users"
+      api-url="/get_all_affiliates"
       :fields="fields"
       pagination-path=""
       :css="css.table"
@@ -63,24 +63,15 @@ export default {
           dataClass: 'text-center',
         },
         {
-          name: 'name',
-          sortField: 'name',
+          name: 'first_name',
+          sortField: 'first_name',
         },
         {
-          name: 'email',
-          sortField: 'email'
-        },
-        {
-          name: 'birthdate',
+          name: 'birth_date',
           sortField: 'birthdate',
           titleClass: 'text-center',
           dataClass: 'text-center',
           callback: 'formatDate|DD-MM-YYYY'
-        },
-        {
-          name: 'nickname',
-          sortField: 'nickname',
-          callback: 'allcap'
         },
         {
           name: 'gender',
@@ -88,13 +79,6 @@ export default {
           titleClass: 'text-center',
           dataClass: 'text-center',
           callback: 'genderLabel'
-        },
-        {
-          name: 'salary',
-          sortField: 'salary',
-          titleClass: 'text-center',
-          dataClass: 'text-right',
-          callback: 'formatNumber'
         },
         {
           name: '__component:custom-actions',
@@ -130,7 +114,7 @@ export default {
         },
       },
       sortOrder: [
-        { field: 'email', sortField: 'email', direction: 'asc'}
+        { field: 'first_name', sortField: 'first_name', direction: 'asc'}
       ],
       moreParams: {}
     }
